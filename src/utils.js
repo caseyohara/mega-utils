@@ -1,9 +1,9 @@
 var Utils = Utils || {
 	
 	extend : function(params, defaults) {
-		if( typeof params !== "undefined" && typeof params === "object") {
-			for(var index in defaults) {
-				if(typeof params[index] === "undefined") { 
+		if ( typeof params === "object" ) {
+			for ( var index in defaults ) {
+				if ( typeof params[index] === "undefined" ) { 
 					params[index] = defaults[index]; 
 				}
 			}
