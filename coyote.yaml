@@ -1,0 +1,5 @@
+output: utils.js
+compress: true
+input:
+  - src/utils.js
+  - src/utils/hash.js
