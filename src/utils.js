@@ -4,10 +4,13 @@ var Utils = Utils || {
 		if ( typeof params !== "object" ) { return defaults };
 
 		for ( var index in defaults ) {
-			if ( typeof params[index] === "undefined" ) { params[index] = defaults[index]; };
+			if ( typeof params[index] === "undefined" ) { 
+				params[index] = defaults[index];
+			}
 		}
 		
 		return params;
 	}
+
 	
 };
