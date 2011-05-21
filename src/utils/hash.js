@@ -8,7 +8,7 @@ Utils.Hash = function(config){
 
 	
 	self.initialize = function(){
-		config.slash ? add_slash_to_path() : null;
+		if ( config.slash ) { add_slash_to_path() };
 		return self;
 	};
 
@@ -19,8 +19,8 @@ Utils.Hash = function(config){
 
 
 	self.set = function(hash){
-		config.slash ? add_slash_to_path() : null;
-		config.slash ? hash = add_slash_to_hash(hash) : null;
+		if ( config.slash ) { add_slash_to_path() };
+		hash = config.slash ? add_slash_to_hash(hash) : hash;
 		location.hash = hash.replace(/-/g, "/");
 		return self.get();
 	};
