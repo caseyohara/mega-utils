@@ -1,5 +1,6 @@
-output: utils.js
+output: lib/utils.js
 compress: false
 input:
   - src/utils.js
   - src/utils/hash.js
+  - src/utils/date.js  
